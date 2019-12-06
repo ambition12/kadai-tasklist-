@@ -9,7 +9,11 @@
       </ul>
     </div>
   <% end %>
-
+  
+  <%= f.label :status,'ステータス'%>
+  <%= f.text_field :status %>
+  <!--<input type="text" value= <%= :status%>   /> -->
+  
   <%= f.label :content, 'タスク' %>
   <%= f.text_field :content %>
 
