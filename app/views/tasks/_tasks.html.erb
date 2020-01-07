@@ -7,14 +7,20 @@
           <%= link_to task.user.name, user_path(task.user) %> <span class="text-muted">posted at <%= task.created_at %></span>
         </div>
         <div>
+          <ul>
+                <li><%= link_to task.id, task %> <br>status: <%= task.status %> <br>task:<%= task.content %></li>
+            </ul>
+          <!--
           <p>status : <%= task.status %></p>
-          <p>task: <%= task.content %></p>
+          <p>task: <%= task.content %></p>-->
         </div>
         <div>
+          <!--
           <% if current_user == task.user %>
-            <%= link_to "Edit",edit_task_path(task.id), class: 'btn btn-primary btn-sm' %>
+            <%= link_to "Edit",edit_task_path(task.id), class: 'btn btn-light btn-sm' %>
             <%= link_to "Delete", task, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
-          <% end %>
+          <% end %> 
+          -->
         </div>
       </div>
     </li>
